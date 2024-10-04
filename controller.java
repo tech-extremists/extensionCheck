@@ -2,7 +2,7 @@
 public class controller {
     public static void main(String[] args) {
         // Declare two numbers
-        int num1 = 20;
+        int num1 = 40;
         int num2 = 40;
 
         // Perform addition
