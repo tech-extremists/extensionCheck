@@ -6,7 +6,7 @@ public class controller {
         int num2 = 20;
 
         // Perform addition
-        int sum = num1 + num2;
+        int sum = math.add(num1, num2);
 
         // Print the result
         System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
