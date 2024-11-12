@@ -55,6 +55,13 @@ class Item:
 
 class Inventory:
     """Class to manage the store's inventory."""
+    def remove_item(self, item_id):
+        """Removes an item from inventory by its ID."""
+        if item_id not in self.items:
+            raise ValueError("Item ID does not exist.")
+        removed_item = self.items.pop(item_id)
+        logging.info(f"Removed item from inventory: {removed_item}")
+        print(f"Item '{removed_item.name}' has been removed from the inventory.")
 
     def __init__(self):
         # Initialize inventory with an empty dictionary of items
