@@ -11,4 +11,8 @@ public class controller {
         // Print the result
         System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
     }
+
+    public static int add(int num1, int num2) {
+        return num1 + num2;
+    }
 }
