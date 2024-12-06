@@ -9,6 +9,6 @@ public class controller {
         int summation = math.add(num1, num2);
 
         // Print the result
-        System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
+        System.out.println("The result of " + num1 + " and " + num2 + " is: " + sum);
     }
 }
