@@ -5,7 +5,6 @@ import os  # For checking file existence when loading data
 import logging
 from typing import Optional  # For logging operations such as adding items or recording sales
 
-# Configure logging settings to write logs to a file with specific format
 logging.basicConfig(filename='store_log.txt', level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
