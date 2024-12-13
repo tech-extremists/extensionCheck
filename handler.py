@@ -374,9 +374,7 @@ def main():
         except (ValueError, PermissionError) as e:
             print(f"Error: {e}")
             
-def _temporal_split_from_datetime(
-    example_datetime: datetime.datetime
-) -> Optional[str]:
+def _temporal_split_from_datetime( example_datetime: datetime.datetime) -> Optional[str]:
     """Finds the split name using the example datetime."""
     end_train_datetime = datetime.datetime.strptime('2022-01-01', '%Y-%m-%d')
     end_valid_datetime = datetime.datetime.strptime('2022-05-01', '%Y-%m-%d')
