@@ -374,7 +374,6 @@ def main():
             print(f"Error: {e}")
             
 def _temporal_split_from_datetime( example_datetime: datetime.datetime) -> Optional[str]:
-    """Finds the split name using the example datetime."""
     end_train_datetime = datetime.datetime.strptime('2022-01-01', '%Y-%m-%d')
     end_valid_datetime = datetime.datetime.strptime('2022-05-01', '%Y-%m-%d')
     end_test_datetime = datetime.datetime.strptime('2022-06-01', '%Y-%m-%d')
