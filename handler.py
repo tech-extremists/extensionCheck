@@ -378,7 +378,7 @@ def _temporal_split_from_datetime( example_datetime: datetime.datetime) -> Optio
     end_valid_datetime = datetime.datetime.strptime('2022-05-01', '%Y-%m-%d')
     end_test_datetime = datetime.datetime.strptime('2022-06-01', '%Y-%m-%d')
 
-    if example_datetime < end_train_datetime:
+    if example_datetime <= end_train_datetime:
         return 'train'
     elif example_datetime < end_valid_datetime:
         return 'validation'
