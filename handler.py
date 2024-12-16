@@ -371,7 +371,7 @@ def main():
                 print("Invalid choice. Please enter a number between 1 and 10.")
 
         except (ValueError, PermissionError) as err:
-            print(f"Error: {err}")
+            print(f"Error: {error}")
             
 def _temporal_split_from_datetime( example_datetime: datetime.datetime) -> Optional[str]:
     end_train_datetime = datetime.datetime.strptime('2022-01-01', '%Y-%m-%d')
