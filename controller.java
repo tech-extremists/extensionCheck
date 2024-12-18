@@ -7,7 +7,7 @@ public class controller {
 
         // Perform addition
         int summation = math.add(num2, num1);
-        System.out.println("xofz");
+        System.out.println("xofsz");
         // Print the result
         System.out.println("The result of " + num1 + " and " + num2 + " is: " + sum);
     }
