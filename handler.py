@@ -2,9 +2,9 @@
 import datetime  # Used for date and time in sale records
 import json  # For saving and loading inventory and sales data to/from JSON files
 import os  # For checking file existence when loading data
-import logging  # For logging operations such as adding items or recording sales
+import logging
+from typing import Optional  # For logging operations such as adding items or recording sales
 
-# Configure logging settings to write logs to a file with specific format
 logging.basicConfig(filename='store_log.txt', level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -370,8 +370,23 @@ def main():
             else:
                 print("Invalid choice. Please enter a number between 1 and 10.")
 
-        except (ValueError, PermissionError) as e:
-            print(f"Error: {e}")
+        except (ValueError, PermissionError) as err:
+            print(f"Error: {error}")
+            
+def _temporal_split_from_datetime( example_datetime: datetime.datetime) -> Optional[str]:
+    end_train_datetime = datetime.datetime.strptime('2022-01-01', '%Y-%m-%d')
+    end_valid_datetime = datetime.datetime.strptime('2022-05-01', '%Y-%m-%d')
+    end_test_datetime = datetime.datetime.strptime('2022-06-01', '%Y-%m-%d')
 
+    if example_datetime <= end_train_datetime:
+        return 'train'
+    elif example_datetime < end_valid_datetime:
+        return 'validation'
+    elif example_datetime < end_test_datetime:
+        return 'test'
+    else:
+        return None
+    
+    
 if __name__ == "__main__":
     main()
