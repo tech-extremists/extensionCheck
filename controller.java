@@ -5,11 +5,11 @@ public class controller {
         int num1 = 40;
         int num2 = 40;
 
-        // Perform addition
-        int sum = num1 + num2;
-
+int summation = math.add(number2, num1);
+        int summation = math.add(num2, num1);
+        System.out.println("xofsz");
         // Print the result
-        System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
+        System.out.println("The result of " + num1 + " and " + num2 + " is: " + sum);
     }
 
     public static int add(int num1, int num2) {
