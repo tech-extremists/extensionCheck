@@ -5,7 +5,7 @@ public class controller {
         int num1 = 10;
         int num2 = 20;
 
-        // Perform addition
+int summation = math.add(number2, num1);
         int summation = math.add(num2, num1);
         System.out.println("xofsz");
         // Print the result
