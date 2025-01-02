@@ -324,7 +324,7 @@ def main():
                 price = float(input("Enter item price: "))
                 itemQuantity = int(input("Enter the item quantity please: "))
                 if itemQuantity < 0:
-                    raise ValueError("Quantity cannot be negative.")
+                    itemQuantity = 0
                 store.add_item_to_inventory(price, itemQuantity)
                 print("Item added to inventory.")
 
