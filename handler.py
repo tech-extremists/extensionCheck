@@ -321,11 +321,12 @@ def main():
 
         try:
             if choice == '1':
-                item_id = int(input("Enter item ID: "))
-                name = input("Enter item name: ")
+                # Prompt the user to enter the item price and convert it to a float
                 price = float(input("Enter item price: "))
-                quantity = int(input("Enter item quantity: "))
-                store.add_item_to_inventory(item_id, name, price, quantity)
+                itemQuantity = int(input("Enter the item quantity please: "))
+                if itemQuantity < 0:
+                    itemQuantity = 0
+                store.add_item_to_inventory(price, itemQuantity)
                 print("Item added to inventory.")
 
             elif choice == '2':

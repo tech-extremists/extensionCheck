@@ -1,14 +1,10 @@
 
 public class controller {
     public static void main(String[] args) {
-        // Declare two numbers
-        int num1 = 10;
-        int num2 = 20;
-
         // Perform addition
-        int sum = math.add(num1, num2);
+        int sum = math.add(args[1], args[2]);
 
         // Print the result
-        System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
+        System.out.println("The sum of " + args[1] + " and " + args[2] + " is: " + sum);
     }
 }
