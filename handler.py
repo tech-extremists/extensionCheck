@@ -321,6 +321,7 @@ def main():
 
         try:
             if choice == '1':
+                # Prompt the user to enter the item price and convert it to a float
                 price = float(input("Enter item price: "))
                 itemQuantity = int(input("Enter the item quantity please: "))
                 if itemQuantity < 0:
