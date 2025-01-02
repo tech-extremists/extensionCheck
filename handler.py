@@ -322,8 +322,10 @@ def main():
         try:
             if choice == '1':
                 price = float(input("Enter item price: "))
-                quantity = int(input("Enter the item quantity please: "))
-                store.add_item_to_inventory(price, quantity)
+                itemQuantity = int(input("Enter the item quantity please: "))
+                if itemQuantity < 0:
+                    raise ValueError("Quantity cannot be negative.")
+                store.add_item_to_inventory(price, itemQuantity)
                 print("Item added to inventory.")
 
             elif choice == '2':
